@@ -37,11 +37,12 @@
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-minSdkVersion"      value="14" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-    <preference name="android-build-tool" value="gradle" />
 
     <preference name="phonegap-version"       value="cli-6.3.0" />
     
     
+    <preference name="android-build-tool" value="gradle" />
+
 
     <!-- Define a specific version of PhoneGap to build into your app. -->
     <!-- <preference name="phonegap-version"       value="cli-6.0.0" /> -->
@@ -75,10 +76,10 @@
     <plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
     <plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
     
-<gap:plugin name="com.phonegap.plugins.facebookconnect"  spec="0.9.0" source="pgb">
-<param name="APP_ID" value="677312575732515" />
-<param name="APP_NAME" value="Hotmat" />
-</gap:plugin>
+    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
+        <param name="APP_ID" value="677312575732515" />
+        <param name="APP_NAME" value="Hotmat" />
+    </gap:plugin>
     
     <!-- Define app icon and splashscreen for each platform. -->
     <icon src="icon.png" />
