@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "se.hotmat.customer"
-        versionCode	= "1600000"
-        version   = "1.6.0">
+<widget 
+        id="se.hotmat.customer"
+	version="1.6.0"
+	versionCode	= "1600000"
+	xmlns="http://www.w3.org/ns/widgets"
+	xmlns:cdv="http://cordova.apache.org/ns/1.0"
+	xmlns:gap   = "http://phonegap.com/ns/1.0>		
+
 
     <name>Hotmat</name>
 
@@ -65,7 +68,10 @@
     <plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
 
     <plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
-    
+    <plugin name="com.phonegap.plugins.facebookconnect" spec="0.9.0"> source="pgb">
+    	<param name="APP_ID" value="677312575732515" />
+    	<param name="APP_NAME" value="Hotmat" />
+    </gap:plugin>
 
 
     <!-- Define app icon and splashscreen for each platform. -->
