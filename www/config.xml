@@ -76,7 +76,10 @@
     <plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
     <plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
     
-    
+<plugin name="com.phonegap.plugins.facebookconnect" spec="0.9.0"> source="pgb">
+<param name="APP_ID" value="677312575732515" />
+<param name="APP_NAME" value="Hotmat" />
+</gap:plugin>
     
     <!-- Define app icon and splashscreen for each platform. -->
     <icon src="icon.png" />
