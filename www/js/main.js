@@ -1787,10 +1787,10 @@ function setupPolicyWindow(){
 
 //********* Facebook login / logout (start)
 function facebookLogin(){
-	
+	hideRightMenu();
 	var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
 	
-	hideRightMenu();
+	
 	
 	/*facebookConnectPlugin.login(["public_profile"],
 		function (userData) { alert("UserInfo: " + JSON.stringify(userData)); },
