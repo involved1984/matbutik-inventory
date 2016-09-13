@@ -1,60 +1,576 @@
-<!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!DOCTYPE HTML>
 <html>
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1" name="viewport">
+	<title>Beställ mat på nätet - Utkörning av mat</title>
+	<meta itemprop="description" name="description" content="Beställ mat på nätet. Hitta din favoritrestaurang, beställ och få maten levererad. Hemkörning, Mat utkörning">
+	<meta name="keywords" content="Beställa mat, utkörning, mat hemkörning, restauranger, mat">
+	
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script type="text/javascript"  charset="utf-8" src="cordova.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
-<body>
-    <div class="app">
-        <h1>PhoneGap</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
-        </div>
-    </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
-</body>
+<body ontouchstart="">
 
+
+<div id="menuPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle" id="restaurantsInfoButton"><div class="topBarPageTitleText"></div><span class="topBarPageTitleIconHolder"><span class="topBarPageTitleIcon"></span></span></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	
+	<div id="menuPageBottomMenu">
+		<div id="menuPageBottomCartDetails">
+			<div id="menuPageBottomNumProducts"><span>Produkter:</span>0 st</div>
+			<div id="menuPageBottomTotalPrice"><span>Summa:</span>0 kr</div>
+		</div>
+		<div id="menuPageBottomCheckoutButton"><span></span>Till kassan</div>
+		<div id="menuPageBottomCartButton"><span></span>Varukorg</div>
+	</div>
+	
+	
+	
+	<div id="deliveryTypeBox">
+		<div id="deliveryTypeBoxContent">
+			Priser gäller: <select id="menuPageDeliverTypeDropdown">
+			<!--option value="deliver">Utkörning</option><option value="togo">Avhämtning/Servering</option--></select> <span id="menuPageShowTerms">Visa villkor</span><span id="menuPageHideTerms">Dölj villkor</span>
+			<div id="restaurantHeaderTextBox">
+				<hr>
+				Normal leveranstid vid utkörning är 45-60 minuter.<br>
+				Beställningen måste uppgå till minst 70 kr , annars får du betala mellanskillnaden upp till 70 kr.
+			</div>
+		</div>
+	</div>
+
+	<div id="menuContainer">
+	</div>
+
+
+	
+</div>
+
+
+<div id="restaurantInfoPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle"><div class="topBarPageTitleText">Sörby grill och pizzeria i Linköping</div></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	<div class="whiteContentBoxes">
+		<div id="infoPageContent">
+			<img id="infoPageRestaurantLogo" src="graphics/test_restaurant_logo1.png">
+			<div class="infoPageRateStarsHolder"><div class="infoPageRateStars"></div></div>
+
+			
+			<div class="infoPageRows"><span class="infoPageTitles">Mattyp:</span><span id="infoPageFoodType">Pizza, Hamburgare</span></div>
+			<div class="infoPageRows"><span class="infoPageTitles">Avhämtning:</span><span id="infoPageTogoStatus">Öppen</span></div>
+			<div class="infoPageRows"><span class="infoPageTitles">Utkörning:</span><span id="infoPageDeliverStatus">Öppen</span></div>
+			<div class="infoPageRows"><span class="infoPageTitles">Adress:</span><span id="infoPageAddress">Ugglegatan 13, 58254 Linköping</span></div>
+			
+			<br>
+			
+			<div class="infoPageRows"><span class="infoPageTitles">Öppettider:</span><span class="calendarCells">Avhämtning</span><span class="calendarCells">Utkörning</span></div>
+			<hr>
+			<div class="infoPageRows"><span class="infoPageTitles">Måndag:</span><span class="calendarCells" id="togoTimes-0">11:00-21:00</span><span class="calendarCells" id="deliverTimes-0">11:00-21:00</span></div>
+			<div class="infoPageRows"><span class="infoPageTitles">Tisdag:</span><span class="calendarCells" id="togoTimes-1">11:00-21:00</span><span class="calendarCells" id="deliverTimes-1">11:00-21:00</span></div>
+			<div class="infoPageRows"><span class="infoPageTitles">Onsdag:</span><span class="calendarCells" id="togoTimes-2">11:00-21:00</span><span class="calendarCells" id="deliverTimes-2">11:00-21:00</span></div>
+			<div class="infoPageRows"><span class="infoPageTitles">Torsdag:</span><span class="calendarCells" id="togoTimes-3">11:00-21:00</span><span class="calendarCells" id="deliverTimes-3">11:00-21:00</span></div>
+			<div class="infoPageRows"><span class="infoPageTitles">Fredag:</span><span class="calendarCells" id="togoTimes-4">11:00-21:00</span><span class="calendarCells" id="deliverTimes-4">11:00-21:00</span></div>
+			<div class="infoPageRows"><span class="infoPageTitles">Lördag:</span><span class="calendarCells" id="togoTimes-5">11:00-21:00</span><span class="calendarCells" id="deliverTimes-5">11:00-21:00</span></div>
+			<div class="infoPageRows"><span class="infoPageTitles">Söndag:</span><span class="calendarCells" id="togoTimes-6">11:00-21:00</span><span class="calendarCells" id="deliverTimes-6">11:00-21:00</span></div>
+			<hr>
+			<div id="infoPageDescriptionText">
+				Välkommen till Pizzeria Express. Uppskattad leveranstid är 45-60 minuter. Pizzasallad ingår i samtliga pizzor.
+			</div>
+			<hr>
+
+			<div class="infoPageRows"><span class="infoPageTitles">Betyg:</span><span id="infoPageRateDetails">4.0 av 5.0 (27 st)</span></div>
+			<br>
+			<div id="infoPageCustomerRateHoldes">
+				<div class="infoPageRows">
+					<div class="infoPageRateStarsHolder"><div class="infoPageRateStars"></div></div>
+					<div class="infoPageRateDate">2016-06-20</div>
+				</div>
+				<div class="infoPageRows">
+					<div class="infoPageRateStarsHolder"><div class="infoPageRateStars"></div></div>
+					<div class="infoPageRateDate">2016-06-20</div>
+				</div>
+				<div class="infoPageRows">
+					<div class="infoPageRateStarsHolder"><div class="infoPageRateStars"></div></div>
+					<div class="infoPageRateDate">2016-06-20</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div id="listPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle"><div class="topBarPageTitleText">Ugglegatan 13</div></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	<div id="restaurantListHolder">
+	</div>
+</div>
+
+
+<div id="firstPage" class="pages">
+	<div class="topBar">
+		<div class="topBarMenuButton"></div>
+	</div>
+	
+	<div id="firstPageContent">
+		<div>
+			<img src="graphics/first_page_logo.png" id="firstPageLogo">
+		</div>
+		<div id="firstPageMovableAddressChangerHolder">
+			<div id="firstPageAddressFieldHolder">
+				<div>
+					<div id="adressHelperPopupHolder">
+						<div id="adressHelperPopup">T.ex. Drottninggatan 1 Linköping<span id="adressHelperPopupArrow"></span></div>
+					</div>
+					<input type="text" id="firstPageAddressField" placeholder="ANGE DIN ADRESS ELLER STAD">
+				</div>
+				<div id="firstPageAddressList">
+					
+				</div>
+			</div>
+		</div>
+		<br>
+		<input type="button" id="firstPageGpsButton" value="HITTA MIG MED GPS">
+		<div id="firstPageTeaserText">Beställ din favoritmat på nätet</div>
+	</div>
+</div>
+
+
+
+
+<div id="cartPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle"><div class="topBarPageTitleText">Sörby grill och pizzeria i Linköping</div></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	<div class="whiteContentBoxes">
+		<div class="cartTitle">Varukorg<div class="cartTitleIcon"></div><div class="cartTitleTrashIcon"></div></div>
+		<div id="cartIsEmptyMessage" style="display: block;">Det finns inga varor i din varukorg. Klicka på varor för att lägga i din varukorg!</div>
+		<div id="cartItemList">
+			<div class="cartItemRow">Margherita <span class="cartDeleteIcon"></span><span class="cartEditIconEdited"></span><span class="cartPrices">70 kr</span></div>
+			<div class="cartItemRow">Vesuvio <span class="cartDeleteIcon"></span><span class="cartEditIconOriginal"></span><span class="cartPrices">80 kr</span></div>
+		</div>
+		<div class="cartItemRow cartTotalTitle">Summa<span id="cartPageTotalPrice" class="cartPrices">0 kr</span></div>
+	</div>
+	<br>
+	<center><input type="button" id="cartPageCheckoutButton" class="greenButtons" value="Till kassan"></center>
+</div>
+
+
+<div id="checkoutPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle"><div class="topBarPageTitleText">Kassan</div></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	<div class="whiteContentBoxes">
+		<div class="checkoutPageBigTitles" id="checkoutRestaurantName">Pizzeria Motecarlo (Kristinehamn)</div>
+	</div>
+	<div class="whiteContentBoxes" id="checkoutErrorMessageHolderBox">
+		<div class="checkoutPageBigTitles">Felmeddelande</div>
+		<ol class="checkoutErrorMessage">
+			<li>Du måste ange din adress för utkörning</li>
+			<li>Skriv ett gilltigt telefonnummer</li>
+		</ol>
+	</div>
+	<div class="whiteContentBoxes">
+		<div class="checkoutPageBigTitles">Dina varor</div>
+		
+		<div id="checkoutCartItemsHolder">
+			<div class="cartItemRow">
+				<div>Capricciosa super<span class="cartPrices">75 kr</span></div>
+			</div>
+			<div class="cartItemRow">
+				<div>Vesuvio<span class="cartPrices">80 kr</span></div>
+				<div class="checkoutAddedIngredient">Lägg till: Champinjoner, Gurka</div>
+				<div class="checkoutRemovedIngredient">Ta bort: Lök, Tomatsås</div>
+			</div>
+			<div class="cartItemRow">
+				<div>Margherita<span class="cartPrices">70 kr</span></div>
+			</div>
+			<div class="cartItemRow">
+				<div>Margherita<span class="cartPrices">70 kr</span></div>
+			</div>
+			<div class="cartItemRow cartTotalTitle">Summa<span class="cartPrices" id="checkoutTotalPrice">150 kr</span></div>
+		</div>
+
+		
+	</div>
+	
+	<div class="whiteContentBoxes">
+		Kampanjkod: <input type="text" id="checkoutOfferCode" class="checkoutFields"><input type="button" id="checkoutUseOfferCodeButton" value="Visa">
+	</div>
+	
+	<div class="whiteContentBoxes">
+		<div class="checkoutPageBigTitles">Leveranssätt</div>
+		<div class="deliverTypesHolder" id="deliverTypeHolderDelivery">
+			<input type="radio" name="checkoutshowprice" value="deliver" id="showPriceDeliver"><label for="showPriceDeliver"> Utkörning</label>
+		</div>
+		<div class="deliverTypesHolder" id="deliverTypeHolderTogo">
+			<input type="radio" name="checkoutshowprice" value="togo" id="showPriceTogo"><label for="showPriceTogo"> Avhämtning</label>
+		</div>
+	</div>
+	
+	<div class="whiteContentBoxes">
+		<div class="checkoutPageBigTitles">Betalsätt</div>
+		<div class="checkoutPaytypeButtons" title="card" id="checkoutPaytypeCard"><span></span>Kort</div>
+		<div class="checkoutPaytypeButtons" title="mobile" id="checkoutPaytypeInvoice"><span></span>Faktura</div>
+		<div class="checkoutPaytypeButtons" title="cash" id="checkoutPaytypeCash"><span></span>Kontant</div>
+	</div>
+	
+	<div class="whiteContentBoxes" id="checkoutDeliverAddressBox">
+		<div class="checkoutPageBigTitles">Leveransadress</div>
+		
+		<div id="checkoutChangeAddressButtonHolder">
+			<div id="checkoutUserEnteredAddress"></div><br>
+			<span id="checkoutChangeAddressButton">Klicka här för att ange din adress</span>
+		</div>
+		
+		<div id="checkoutChangeAddressHolder"></div>
+		
+		<div class="checkoutDetailsRow">
+			<div class="checkoutPageSmallTitles">Våning: </div><input type="text" id="checkoutfloornr" class="checkoutFields" maxlength="3">
+		</div>
+		<div class="checkoutDetailsRow">
+			<div class="checkoutPageSmallTitles">Portkod: </div><input type="text" id="checkoutportcode" class="checkoutFields" maxlength="10">
+		</div>
+	</div>
+	
+	<div class="whiteContentBoxes">
+		<div class="checkoutPageBigTitles">Uppgifter</div>
+		<div class="checkoutDetailsRow">
+			<div class="checkoutPageSmallTitles">Namn: </div><input type="text" id="checkoutName" class="checkoutFields" maxlength="40">
+		</div>
+		<div class="checkoutDetailsRow">
+			<div class="checkoutPageSmallTitles">E-post: </div><input type="text" id="checkoutEmail" class="checkoutFields" maxlength="100">
+		</div>
+		<div class="checkoutDetailsRow">
+			<div class="checkoutPageSmallTitles">Tel.Nr: </div><input type="text" id="checkoutPhonenumber" class="checkoutFields" maxlength="30">
+		</div>
+		<div class="checkoutDetailsRow">
+			<div class="checkoutPageSmallTitles">Meddelande: </div><input type="text" id="checkoutMessage" class="checkoutFields" maxlength="100">
+		</div>
+		
+	</div>
+	
+	<div class="whiteContentBoxes centered">
+		<input type="button" id="checkoutProceedButton" class="greenButtons" value="Fortsätt till betalningen">
+	</div>
+</div>
+
+
+<div id="paymentPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle"><div class="topBarPageTitleText">Betalning</div></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	<div id="paymentFrameHolder">
+		<iframe src="" id="paymentIframe" frameborder="0"></iframe>
+	</div>
+</div>
+
+
+
+
+<div id="loginPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle"><div class="topBarPageTitleText">Facebook inloggning</div></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	<div id="loginFrameHolder">
+		<iframe src="" id="loginIframe" frameborder="0"></iframe>
+	</div>
+</div>
+
+
+
+
+
+<div id="successPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle"><div class="topBarPageTitleText">Bekräftelse</div></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	<div class="whiteContentBoxes">
+		Din beställning är nu klar.<br>
+		<br>
+		Restaurangen kommer nu att granska och bekräfta beställningen och ange leveranstid. Det tar normalt 30 sekunder<br>
+		<br>
+		<div class="centered" id="successPageLoaderHolder">
+			<img src="graphics/loader_1.gif"><br>
+			Väntar på svar från restaurangen<br>
+			Vänligen vänta...<br>
+			
+		</div>
+		<br>
+		<div class="centered">
+			Orernummer: <span id="succesPageOrderId">F4D89E</span>
+		</div>
+		<br>
+		<br><br>
+		Har det tagit lång tid? Kontrollera din internetkoppling<br>
+		Har du frågor? Du kan ringa restaurangen på:<br>
+		<br>
+		<div class="centered">
+			<span class="greenButtons">012 - 3456789</span><br>
+			<br>
+			<br>
+			Besök vår Facebook sida<br>
+			<a href="https://www.facebook.com/hotmat.se" target="_blank" id="successFacebookButton"></a>
+		</div>
+		
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+<div id="orderHistoryPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle"><div class="topBarPageTitleText">Orderhistorik</div></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	
+	<div id="orderHistoryContainer">
+		
+	</div>
+</div>
+
+
+
+
+<div id="oneOrderPage" class="pages">
+	<div class="topBar">
+		<div class="topBarBackButton"></div>
+		<div class="topBarPageTitle"><div class="topBarPageTitleText">Beställning</div></div>
+		<div class="topBarMenuButton"></div>
+	</div>
+	
+	<div id="oneOrderDetailsContainer">
+		
+	</div>
+</div>
+
+
+
+
+
+<div id="rateBoxScreenOverlay">
+	<div id="rateBox">
+		<div id="rateBoxTitle">Betyg</div>
+		<div id="rateBoxContent">
+			<div id="qualityRatingStarsContainer">
+				Kvalitet:<br>
+				<span class="rateStar qualityRateStar" id="1"></span>
+				<span class="rateStar qualityRateStar" id="2"></span>
+				<span class="rateStar qualityRateStar" id="3"></span>
+				<span class="rateStar qualityRateStar" id="4"></span>
+				<span class="rateStar qualityRateStar" id="5"></span>
+				<br><br>
+			</div>
+			
+			<div id="deliverRatingStarsContainer">
+				Utkörning:<br>
+				<span class="rateStar deliveryRateStar" id="1"></span>
+				<span class="rateStar deliveryRateStar" id="2"></span>
+				<span class="rateStar deliveryRateStar" id="3"></span>
+				<span class="rateStar deliveryRateStar" id="4"></span>
+				<span class="rateStar deliveryRateStar" id="5"></span>
+				<br>	<br>
+			</div>
+				
+			
+		</div>
+		<input type="button" id="rateBoxSendButton" value="Skicka">
+		<input type="button" id="rateBoxCloseButton" value="Stäng">
+	</div>
+</div>
+
+
+
+
+
+
+<div id="variantPickerScreenOverlay">
+	<div id="variantPicker">
+		<div id="variantPickerTitle">Välj variant</div>
+		<div id="variantPickerList">
+		</div>
+		<input type="button" id="variantPickerCancelButton" value="Avbryt">
+	</div>
+</div>
+
+
+
+<div id="policyWindowScreenOverlay">
+	<div id="policyWindow">
+		<div id="policyWindowHeader">
+			Beställningsvillkor
+			<div id="policyWindowCloseIcon"></div>
+		</div>
+		<div id="policyWindowContent">
+		
+		
+			Det är restaurangen som bestämmer hur snabbt dom kan laga maten och leveranstiden räknas automatiskt med GPS. Leveranstiden varierar ofta med tiden på dygnet och vi reserverar oss för eventuella dröjsmål till följd av lång orderkö eller trafikproblem. <br>
+			För särskilt långa leveranstider har restauranger/budfirman ansvaret att meddela kunden så snart som möjligt.<br>
+			Personliga uppgifter som fylls i beställningsformuläret ska vara korrekt och tillhöra den som beställer maten.  Legitimation måste visas vid leveransen.<br>
+			Hotmat.se ansvarar inte för utebliven leverans till följd av otillräcklig eller felaktig information i beställningsformuläret. <br>
+			Man måste ha fyllt 18 år för att beställa från Hotmat.se<br>
+			<br>
+			<br>
+
+			<div class="policyTitles">Priser</div><br>
+			Alla priser på Hotmat.se är inklusive moms. Det är restaurangens ansvar att hålla hemsidan uppdaterat med eventuella prisändringar.<br>
+			Utkörningspriser beror på avståndet mellan restaurangen och leveransadressen och räknas automatiskt med GPS.<br>
+			<br>
+			<br>
+
+			<div class="policyTitles">Leverans</div><br>
+			Utkörningen sköts av varje enskild restaurang eller budfirma. Restaurangen/Budfirman har ansvar för utkörningen.<br>
+			Det är kundens ansvar att vara på plats när maten levereras. <br>
+			Om maten inte är levererad inom 1 timme efter restaurangens leveranstid ber vi dig att kontakta oss via mail och bifoga beställningens ID så får du pengarna tillbaka.<br>
+			<br>
+			<br>
+
+			<div class="policyTitles">Ångerrätt</div><br>
+			Vid beställning av livsmedel gäller ingen ångerrätt. Utdrag ur <a href="http://www.riksdagen.se/sv/Dokument-Lagar/Lagar/Svenskforfattningssamling/Lag-2000274-om-konsumentsky_sfs-2000-274/" target="_blank">Konsumentverkets informationsbroschyr om Distans- och hemförsäljningslagen : </a><br>
+			Vid distansavtal och hemförsäljningsavtal har du inte någon ångerrätt om du köper livsmedel eller andra varor för ett hushålls löpande förbrukning <br>
+			<br>
+			<br>
+
+			<div class="bigWhiteTitle">Missbruk</div><br>
+			Kundens IP-adress och andra värdefulla information om Internetleverantör lagras i databasen för att vid eventuellt missbruk av tjänsten kunna spåra upp beställaren. Vi polisanmäler och utreder alla typer av missbruk av våra tjänster på Hotmat.se. <br>
+			Vi följer Allmänna reklamationsnämndens rekommendationer. <br>
+			<br>
+			<br>
+
+			<div class="policyTitles">Betalning och säkerhet</div><br>
+			Betalningen sker via DIBS. Vi lagrar inga uppgifter om din bank eller ditt kort. Vi sparar transaktionens ID som skickas från DIBS till oss för att kunna spåra betalningen vid eventuella problem.<br>
+			Dina betalningsuppgifter skickas över en krypterad anslutning (SSL). <br>
+			<br>
+			<br>
+
+			<div class="policyTitles">Vad är SSL?</div><br>
+			Secure Sockets Layer (SSL) är en säkerhetsmekanism som uppfanns till Netscape och används för att kryptera kommunikationen mellan två enheter. Ofta är ena sidan en webbserver (ex. onlinebutik) och den andra är en webbläsare (ex. Internet Explorer, Chrome eller Firefox). Tanken med att kryptera data som sänds till och från dessa två enheter är att ingen annan på nätverket (oftast internet) ska kunna avlyssna eller manipulera informationen. Handlar man på internet så faller det sig naturligt att man använder SSL för att kryptera ex. kreditkortsinformation.<br>
+			<br>
+			<br>
+
+			<div class="policyTitles">Ändringar</div><br>
+			Hotmat.se har rätt att ändra sina köpvillkor utan att meddela kunden. Kunden godkänner köpvillkoren genom att beställa på hemsidan.<br>
+			<br>
+			<br>
+			Hotmat.se Sverige AB<br>
+			Huvudkontor: Sågstuvägen 3D 14149 Huddinge<br>
+			Org nr : 559001-2893<br>
+			Momsreg.nr : SE559001289301<br>
+			E-post : info@hotmat.se<br>
+			<br>
+			För mer information kan du kontakta oss via E-post, <a href="https://www.facebook.com/hotmat.se">Facebook</a> eller kontakta varje enskild restaurang via telefon.
+
+			<br>
+			<br>
+
+
+
+
+
+		
+		
+		
+		</div>
+	</div>
+</div>
+
+
+
+<div id="editFoodWindowContainer">
+	<div id="editFoodWindow">
+		<div id="editFoodWindowPadding">
+			<!--div id="editFoodCloseButton" onclick="closeEditFoodWindow()"></div-->
+			<div id="editFoodTitle">Modifiera</div>
+			<div id="editFoodExtraLink">Vill du ha extra mycket av någon ingrediens? Bocka i både checkboxarna.</div>
+			<div id="editFoodIngredientList"></div>
+			<div id="editFoodButtonsHolder">
+				<div id="editFoodPriceBox">Pris: <div id="editFoodPrice"></div></div>
+				<input type="button" id="editFoodSaveButton" onclick="saveEditedFood()" value="Spara" />
+				<input type="button" id="editFoodCancelButton" onclick="closeEditFoodWindow()" value="Avbryt" />
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="changeAddressPopupContainer">
+	<div id="changeAddressPopup">
+		<div id="changeAddressPopupInside">
+		</div>
+		<br>
+		<input type="button" class="greenButtons" id="changeAddressPopupCloseButton" value="Stäng">
+	</div>
+</div>
+
+
+
+
+<div id="rightMenuScreenOverlay">
+	<div id="rightMenuContainer">
+		<div id="rightMenuheaderContainer">
+			<div id="rightMenuProfilePicContainer"></div>
+			<div id="rightMenuCloseButton"></div>
+		</div>
+		<div class="rightMenuButtons" id="fbLoginButton">
+			<span></span>
+			Logga in
+		</div>
+		<div class="rightMenuButtons" id="fbLogoutButton">
+			<span></span>
+			Logga ut
+		</div>
+		<div class="rightMenuButtons" id="orderHistoryButton">
+			<span></span>
+			Orderhistorik
+		</div>
+		<div class="rightMenuButtons" id="policyButton">
+			<span></span>
+			Köpvillkor
+		</div>
+		<div class="rightMenuButtons" id="settingsButton">
+			<span></span>
+			Inställningar
+		</div>
+	</div>
+</div>
+
+<div id="loadingOverlay"><img src="graphics/loading.gif"></div>
+
+
+<div id="addToCartAnimationHelper"></div>
+
+</body>
 </html>
