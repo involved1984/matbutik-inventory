@@ -1788,14 +1788,10 @@ function setupPolicyWindow(){
 //********* Facebook login / logout (start)
 function facebookLogin(){
 	hideRightMenu();
-	var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-	
-	
-	
-	/*facebookConnectPlugin.login(["public_profile"],
+	facebookConnectPlugin.login(["public_profile"],
 		function (userData) { alert("UserInfo: " + JSON.stringify(userData)); },
 		function (error) { alert("" + error) }
-	);*/
+	);
 	
 	//setCookie('fblogin', '17-10153235550958991-80c7837091816fc0829e5365fc91c6f5ac472d42');
 	//refreshRightMenu();
