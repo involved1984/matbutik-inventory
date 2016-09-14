@@ -77,7 +77,7 @@
     <plugin name="cordova-plugin-dialogs"             source="npm" spec="~1.2.0" />
     <plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
     
-    <plugin name="cordova-plugin-facebookconnect-orlando" version="0.9.0">
+    <plugin name="cordova-plugin-facebookconnect-orlando">
         <param name="APP_ID" value="677312575732515" />
         <param name="APP_NAME" value="Hotmat" />
     </plugin>
