@@ -4,8 +4,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "se.hotmat.customer"
-        versionCode	= "1600100"
-        version   = "1.6.0">
+        versionCode	= "1601100"
+        version   = "1.6.1">
         
         <!-- App ID for Android: air.customerAPP -->
         <!-- App ID for iOS: se.hotmat.customer -->
