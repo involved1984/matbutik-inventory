@@ -5,7 +5,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "se.hotmat.customer"
         versionCode	= "1601100"
-        version   = "1.6.1">
+        ios-CFBundleVersion="1600100"
+        version   = "1.6.0">
         
         <!-- App ID for Android: air.customerAPP -->
         <!-- App ID for iOS: se.hotmat.customer -->
