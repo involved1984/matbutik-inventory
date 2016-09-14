@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "air.customerAPP"
-        versionCode	= "1600000"
+        versionCode	= "1600001"
         version   = "1.6.0">
 
     <name>Hotmat</name>
