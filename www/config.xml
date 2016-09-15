@@ -45,7 +45,7 @@
     <preference name="phonegap-version" value="cli-6.3.0" />
     <!-- preference name="phonegap-version"       value="3.7.0" /-->
     
-    <plugin name="org.apache.cordova.device" source="pgb" />
+    <!-- plugin name="org.apache.cordova.device" source="pgb" />
     <plugin name="cordova-plugin-inappbrowser"        source="npm"/>
     <plugin name="cordova-plugin-geolocation"         source="npm"/>
     <plugin name="cordova-plugin-dialogs"             source="npm"/>
@@ -54,7 +54,7 @@
     <plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
         <param name="APP_ID" value="677312575732515" />
         <param name="APP_NAME" value="Hotmat" />
-    </plugin>
+    </plugin -->
     
     
 
