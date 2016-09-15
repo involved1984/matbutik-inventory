@@ -50,7 +50,15 @@
     <plugin name="cordova-plugin-geolocation"         source="npm"/>
     <plugin name="cordova-plugin-dialogs"             source="npm"/>
     <plugin name="com.phonegap.plugin.statusbar" source="pgb" />
+    
+    
+    <!-- Do not auto hide splash on iOS -->
+    <preference name="AutoHideSplashScreen" value="false" />
+    <!-- Do not auto hide splash on Android -->
+    <preference name="SplashScreenDelay" value="10000"/>
     <plugin name="org.apache.cordova.splashscreen" />
+    
+    
     
     <plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
         <param name="APP_ID" value="677312575732515" />
