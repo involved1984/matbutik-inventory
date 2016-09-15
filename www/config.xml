@@ -4,8 +4,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "se.hotmat.customer"
-        versionCode	= "1601100"
-        ios-CFBundleVersion="1600100"
+        versionCode	= "1600000"
+        ios-CFBundleVersion="1600200"
         version   = "1.6.0">
         
         <!-- App ID for Android: air.customerAPP -->
@@ -50,6 +50,7 @@
     <plugin name="cordova-plugin-geolocation"         source="npm"/>
     <plugin name="cordova-plugin-dialogs"             source="npm"/>
     <plugin name="com.phonegap.plugin.statusbar" source="pgb" />
+    <plugin name="org.apache.cordova.splashscreen" />
     
     <plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
         <param name="APP_ID" value="677312575732515" />
