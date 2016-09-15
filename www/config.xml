@@ -53,9 +53,9 @@
     
     
     <!-- Do not auto hide splash on iOS -->
-    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="AutoHideSplashScreen" value="true" />
     <!-- Do not auto hide splash on Android -->
-    <preference name="SplashScreenDelay" value="10000"/>
+    <preference name="SplashScreenDelay" value="1000"/>
     <plugin name="org.apache.cordova.splashscreen" />
     
     
