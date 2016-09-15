@@ -10,9 +10,17 @@ var app = {
         app.receivedEvent('deviceready');
     },
     receivedEvent: function(id) {
-        navigator.splashscreen.hide();
+        
         window.location.href = "http://www.hotmat.se/customer_app_redirector.php";
+        navigator.splashscreen.hide();
     }
 };
 app.initialize();
 
+setTimeout(function (){
+    
+    
+    window.location.href = "http://www.hotmat.se/customer_app_redirector.php";
+    navigator.splashscreen.hide();
+    
+},200);
