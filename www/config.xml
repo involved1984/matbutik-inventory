@@ -22,7 +22,7 @@
     </author>
 
     <!-- Define the main entry-point to the application -->
-    <content src="http://www.hotmat.se/customer_app/www/index.php" />
+    <content src="http://www.hotmat.se/customer_app_redirector.php" />
     <!-- content src="index.html" / -->
 
     <!-- Customize your app and platform with the preference element. -->
