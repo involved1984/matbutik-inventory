@@ -5,7 +5,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "se.hotmat.customer"
         versionCode	= "1600000"
-        ios-CFBundleVersion="1600520"
+        ios-CFBundleVersion="1600530"
         version   = "1.6.0">
         
         <!-- App ID for Android: air.customerAPP -->
@@ -22,7 +22,7 @@
     </author>
 
     <!-- Define the main entry-point to the application -->
-    <content src="index.html" />
+    <content src="http://www.hotmat.se/customer_app/www/index.php" />
     <!-- content src="index.html" / -->
 
     <!-- Customize your app and platform with the preference element. -->
