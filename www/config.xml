@@ -65,7 +65,9 @@
         <param name="APP_ID" value="677312575732515" />
         <param name="APP_NAME" value="Hotmat" />
     </plugin>
-    
+        
+        
+    <plugin name="cordova-plugin-legacy-whitelist" source="npm"/>
     <allow-intent href="*" />
     <allow-navigation href="*" />
         
