@@ -66,8 +66,8 @@
         <param name="APP_NAME" value="Hotmat" />
     </plugin>
     
-    <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" source="pgb" />
     <allow-intent href="*" />
+    <allow-navigation href="*" />
         
         
 
