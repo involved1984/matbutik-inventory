@@ -57,7 +57,8 @@
     <preference name="ShowSplashScreen" value="true" /> <!-- defaults to "true" -->
     <preference name="SplashScreenWidth" value="170" /> <!-- defaults to "170" -->
     <preference name="SplashScreenHeight" value="200" /> <!-- defaults to "200" -->
-        
+    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashMaintainAspectRatio" value="true" />    
         
         
         
