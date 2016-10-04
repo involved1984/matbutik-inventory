@@ -57,7 +57,8 @@
     <preference name="SplashScreenWidth" value="170" /> <!-- defaults to "170" -->
     <preference name="SplashScreenHeight" value="200" /> <!-- defaults to "200" -->
     <preference name="SplashMaintainAspectRatio" value="true" />    
-        
+    
+    <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
         
         
         
