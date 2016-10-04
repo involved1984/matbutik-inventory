@@ -7,7 +7,7 @@
         android-packageName="air.customerAPP" 
         ios-CFBundleIdentifier="se.hotmat.customer"
         versionCode	= "1600000"
-        ios-CFBundleVersion="1600540"
+        ios-CFBundleVersion="1600550"
         version   = "1.6.0">
         
         <!-- App ID for Android: air.customerAPP -->
