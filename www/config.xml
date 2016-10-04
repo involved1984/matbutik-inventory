@@ -71,7 +71,7 @@
     <plugin name="com.phonegap.plugin.statusbar" source="pgb" />
     
     
-    <plugin name="br.com.paveisitemas.splashscreen" spec="2.1.1" source="pgb" />
+    cordova-plugin-splashscreen
     
     
     
