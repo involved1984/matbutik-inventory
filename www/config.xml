@@ -59,7 +59,7 @@
     <preference name="SplashScreenWidth" value="170" /> <!-- defaults to "170" -->
     <preference name="SplashScreenHeight" value="200" /> <!-- defaults to "200" -->
     <preference name="SplashMaintainAspectRatio" value="true" />    
-    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#d82527" />       
         
         
