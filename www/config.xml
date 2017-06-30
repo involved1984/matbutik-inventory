@@ -3,18 +3,18 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns                   = "http://www.w3.org/ns/widgets"
         xmlns:gap               = "http://phonegap.com/ns/1.0"
-        id                      = "air.customerAPP"
+        id                      = "air.se.hotmat.orderstatus"
         versionCode	        = "1600000"
         ios-CFBundleVersion     = "1600580"
         version                 = "1.6.0">
         
-        <!-- App ID for Android: air.customerAPP -->
-        <!-- App ID for iOS: se.hotmat.customer -->
+        <!-- App ID for Android: air.se.hotmat.orderstatus -->
+        <!-- App ID for iOS: air.se.hotmat.orderstatus -->
         
     <name>Hotmat</name>
 
     <description>
-        Beställ din favoritmat på nätet
+        Orderstatus
     </description>
 
     <author href="http://hotmat.se" email="info@hotmat.se">
