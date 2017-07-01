@@ -47,6 +47,7 @@ var app = {
 
         push.on('registration', function(data) {
             // data.registrationId
+            receivedElement.innerHTML = 'Token: ' + data.registrationId;
         });
 
         push.on('notification', function(data) {
@@ -65,7 +66,7 @@ var app = {
         
         
         
-        receivedElement.innerHTML = 'Waiting for notification token';
+        //receivedElement.innerHTML = 'Waiting for notification token';
         
         
         
