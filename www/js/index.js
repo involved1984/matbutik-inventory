@@ -52,13 +52,9 @@ var app = {
         
         
         setInterval(function(){
-            playSound();
-        }, 8000);
-        playSound();
-        function playSound(){
             var audio = new Audio('http://behzad.se/test.mp3');
             audio.play();
-        }
+        }, 8000);
 
     }
 };
