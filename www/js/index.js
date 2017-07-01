@@ -48,13 +48,16 @@ var app = {
         
         
         
-        window.plugins.insomnia.keepAwake();
+        
         
         
         setInterval(function(){
-            var audio = new Audio('http://behzad.se/test.mp3');
+            var audio = new Audio('test.mp3');
             audio.play();
         }, 8000);
+        
+        
+        window.plugins.insomnia.keepAwake();
 
     }
 };
