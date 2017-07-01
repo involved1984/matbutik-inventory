@@ -29,7 +29,7 @@ var app = {
         
        
         receivedElement.innerHTML = 'Registering for notification';
-        var push = PushNotification.init({
+        /*var push = PushNotification.init({
             android: {
                 senderID: 956432534015
             },
@@ -38,12 +38,24 @@ var app = {
                 badge: "true",
                 sound: "true"
             }
-        }); 
+        }); */
+        
+        var pushNotification = window.plugins.pushNotification;
+        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"812663353807","ecb":"app.onNotificationGCM"});
         
         receivedElement.innerHTML = 'Waiting for notification token';
-        push.on('registration', function(data) {
+        
+        function successHandler(result) {
+            receivedElement.innerHTML = 'Callback Success! Result = '+result;
+        }
+        
+        function errorHandler(error) {
+            alert(error);
+        }
+        
+        /*push.on('registration', function(data) {
             receivedElement.innerHTML = data.registrationId;
-        });
+        });*/
         
         //window.plugins.insomnia.keepAwake();
 
