@@ -85,6 +85,7 @@
         <splash src="www/res/screen/android/drawable-port-xhdpi-screen.png"     density="port-xhdpi" />
         <splash src="www/res/screen/android/drawable-port-xxhdpi-screen.png"    density="port-xxhdpi" />
         <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
+        <resource-file src="google-services.json" target="google-services.json" />
     </platform>
    
         
@@ -116,6 +117,7 @@
         <splash src="www/res/screen/ios/Default-Portrait~ipad.png"      platform="ios" width="768"  height="1024" />
         <splash src="www/res/screen/ios/Default@2x~iphone.png"          platform="ios" width="640"  height="960" />
         <splash src="www/res/screen/ios/Default~iphone.png"             platform="ios" width="320"  height="480" />
+        <resource-file src="GoogleService-Info.plist" />
     </platform>
 
 
