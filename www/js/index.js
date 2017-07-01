@@ -42,7 +42,7 @@ var app = {
         
         
         /****************************/
-        ar push = PushNotification.init({ "android": {"senderID": "812663353807"},
+        var push = PushNotification.init({ "android": {"senderID": "812663353807"},
              "ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
 
         push.on('registration', function(data) {
