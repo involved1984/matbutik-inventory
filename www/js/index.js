@@ -28,7 +28,16 @@ var app = {
         }, 8000);
         
         
-                
+        var push = PushNotification.init({
+            android: {
+                senderID: 956432534015
+            }
+            ios: {
+                alert: "true",
+                badge: "true",
+                sound: "true"
+            }
+        }); 
         
         //window.plugins.insomnia.keepAwake();
 
