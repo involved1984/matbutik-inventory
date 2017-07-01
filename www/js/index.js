@@ -18,11 +18,17 @@ var app = {
         
         console.log('Received Event: ' + id);
 
+        
+        cordova.plugins.backgroundMode.enable();
         setInterval(function(){
             var audio = new Audio('test.mp3');
-            audio.play();
+            if (cordova.plugins.backgroundMode.isActive()){
+                audio.play();
+            }
         }, 8000);
         
+        
+                
         
         //window.plugins.insomnia.keepAwake();
 
