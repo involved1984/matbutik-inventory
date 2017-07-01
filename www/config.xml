@@ -46,8 +46,7 @@
     <plugin name="cordova-plugin-insomnia" />
     <plugin name="cordova-plugin-background-mode" />
     <!--plugin name="phonegap-plugin-push" /-->
-    <gap:plugin name="com.adobe.plugins.pushplugin" />
-        
+            
         
         
     <!--
