@@ -27,11 +27,12 @@ var app = {
             }
         }, 8000);
         
-        
+       
+        receivedElement.innerHTML = 'Registering for notification';
         var push = PushNotification.init({
             android: {
                 senderID: 956432534015
-            }
+            },
             ios: {
                 alert: "true",
                 badge: "true",
@@ -39,7 +40,7 @@ var app = {
             }
         }); 
         
-        receivedElement.innerHTML = 'Registering for notification';
+        receivedElement.innerHTML = 'Waiting for notification token';
         push.on('registration', function(data) {
             receivedElement.innerHTML = data.registrationId;
         });
