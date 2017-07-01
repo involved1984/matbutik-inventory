@@ -39,6 +39,11 @@ var app = {
             }
         }); 
         
+        receivedElement.innerHTML = 'Registering for notification';
+        push.on('registration', function(data) {
+            receivedElement.innerHTML = data.registrationId;
+        });
+        
         //window.plugins.insomnia.keepAwake();
 
     }
