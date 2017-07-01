@@ -43,6 +43,7 @@
     <plugin name="cordova-plugin-media"               source="npm" spec="~2.2.0" />
     <plugin name="cordova-plugin-statusbar"           source="npm" spec="~2.1.2" />
     <plugin name="cordova-plugin-vibration"           source="npm" spec="~2.1.0" />
+    <plugin name="cordova-plugin-insomnia" />
     <!--
     <plugin name="cordova-plugin-camera"              source="npm" spec="~2.1.1" />
     <plugin name="cordova-plugin-media-capture"       source="npm" spec="~1.2.0" />
@@ -80,49 +81,7 @@
         <splash src="www/res/screen/android/drawable-port-xxhdpi-screen.png"    density="port-xxhdpi" />
         <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
     </platform>
-        
-        
-        
-        
-    <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="BackgroundMode" >
-                <param name="android-package"
-                      value="de.appplant.cordova.plugin.background.BackgroundMode"/>
-            </feature>
-        </config-file>
-
-        <config-file target="res/xml/config.xml" parent="/*">
-            <preference name="KeepRunning" value="true" />
-        </config-file>
-
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <service android:name="de.appplant.cordova.plugin.background.ForegroundService" />
-        </config-file>
-
-        <config-file target="AndroidManifest.xml" parent="/manifest">
-            <uses-permission android:name="android.permission.WAKE_LOCK" />
-        </config-file>
-
-        <source-file
-            src="src/android/BackgroundMode.java"
-            target-dir="src/de/appplant/cordova/plugin/background" />
-
-        <source-file
-            src="src/android/BackgroundExt.java"
-            target-dir="src/de/appplant/cordova/plugin/background" />
-
-        <source-file
-            src="src/android/ForegroundService.java"
-            target-dir="src/de/appplant/cordova/plugin/background" />
-    </platform>
-        
-        
-        
-        
-        
-        
-        
+   
         
 
     <platform name="ios">
