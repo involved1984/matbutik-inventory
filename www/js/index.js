@@ -40,18 +40,10 @@ var app = {
             }
         }); */
         
-        var pushNotification = window.plugins.pushNotification;
-        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"812663353807","ecb":"app.onNotificationGCM"});
         
         receivedElement.innerHTML = 'Waiting for notification token';
         
-        function successHandler(result) {
-            receivedElement.innerHTML = 'Callback Success! Result = '+result;
-        }
         
-        function errorHandler(error) {
-            alert(error);
-        }
         
         /*push.on('registration', function(data) {
             receivedElement.innerHTML = data.registrationId;
