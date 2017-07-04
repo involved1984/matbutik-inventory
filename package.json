@@ -17,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/phonegap/phonegap-app-hello-world/issues"
   },
+  "cordova": {
+    "id": "phonegap-plugin-push",
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "browser"
+    ]
+  },
   "homepage": "https://github.com/phonegap/phonegap-app-hello-world"
 }
