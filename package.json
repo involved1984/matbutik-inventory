@@ -21,9 +21,7 @@
     "id": "phonegap-plugin-push",
     "platforms": [
       "ios",
-      "android",
-      "windows",
-      "browser"
+      "android"
     ]
   },
   "homepage": "https://github.com/phonegap/phonegap-app-hello-world"
