@@ -42,7 +42,7 @@ var app = {
         
         
         /****************************/
-        var push = PushNotification.init({ "android": {"senderID": "812663353807"},
+        /*var push = PushNotification.init({ "android": {"senderID": "812663353807"},
              "ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
 
         push.on('registration', function(data) {
@@ -61,9 +61,24 @@ var app = {
 
         push.on('error', function(e) {
             // e.message
-        });
+        });*/
         /****************************/
         
+        
+        var push = PushNotification.init({
+            android: {
+                senderID: "XXXXXXX"
+            },
+            ios: {
+                alert: "true",
+                badge: "true",
+                sound: "true"
+            }
+        });
+        
+        push.on('registration', function(data) {    
+            receivedElement.innerHTML = data.registrationId;
+        });    
         
         
         //receivedElement.innerHTML = 'Waiting for notification token';
