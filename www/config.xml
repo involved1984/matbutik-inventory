@@ -146,7 +146,6 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <resource-file src="test.mp3" target="res/raw/test.mp3" />
-        <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
