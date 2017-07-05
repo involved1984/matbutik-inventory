@@ -88,7 +88,7 @@
         <splash src="www/res/screen/android/drawable-port-xxhdpi-screen.png"    density="port-xxhdpi" />
         <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
         <resource-file src="google-services.json" target="google-services.json" />
-        <resource-file src="test.mp3" target="test.mp3" />
+        <resource-file src="www/test.mp3" target="www/test.mp3" />
     </platform>
    
         
