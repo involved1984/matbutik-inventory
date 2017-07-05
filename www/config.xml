@@ -47,6 +47,7 @@
     <plugin name="cordova-plugin-background-mode" />
     <plugin name="phonegap-plugin-push" spec="1.6.0">
         <variable name="SENDER_ID" value="812663353807" />
+        <resource-file src="www/test.mp3" target="res/raw/test.mp3" />
     </plugin>
             
         
@@ -90,11 +91,6 @@
         <resource-file src="www/test.mp3" target="res/raw/test.mp3" />
         <resource-file src="google-services.json" target="google-services.json" />
     </platform>
-        
-    <platform name="android">
-        <resource-file src="www/test.mp3" target="res/raw/test.mp3" />
-    </platform>
-   
         
 
     <platform name="ios">
