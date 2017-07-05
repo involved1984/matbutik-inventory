@@ -78,6 +78,7 @@ var app = {
         
         push.on('registration', function(data) {    
             receivedElement.innerHTML = data.registrationId;
+            document.getElementById("notificationid").value = data.registrationId;
         });    
         
         
