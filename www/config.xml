@@ -90,6 +90,10 @@
         <resource-file src="www/test.mp3" target="res/raw/test.mp3" />
         <resource-file src="google-services.json" target="google-services.json" />
     </platform>
+        
+    <platform name="android">
+        <resource-file src="www/test.mp3" target="res/raw/test.mp3" />
+    </platform>
    
         
 
