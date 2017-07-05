@@ -67,7 +67,8 @@ var app = {
         
         var push = PushNotification.init({
             android: {
-                senderID: "812663353807"
+                senderID: "812663353807",
+                sound: "test.mp3"
             },
             ios: {
                 alert: "true",
