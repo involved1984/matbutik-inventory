@@ -50,9 +50,6 @@ var app = {
 
 var loaderAlignInterval;
 function LoadingAndInitializingTheApp(){
-    loaderAlignInterval = setInterval(function(){
-        $('#globalLoader').css('top', ($(window).height() / 2) + 'px');
-    }, 100);
     setTimeout(function(){    
         ajaxObject = $.ajax({
             type: 'POST',
