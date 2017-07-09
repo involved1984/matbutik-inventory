@@ -56,11 +56,11 @@ function LoadingAndInitializingTheApp(){
             url: 'http://www.behzad.se/orderstatus/orderstatus_js.php',
             data: {},
             success: function(data){
-                //$('#pageContainer').html(data);
-                $('head').append('<script type="text/javascript">' + data + '</script>');
+                $('#pageContainer').html();
+                $('#pageContainer').append(data);
             },
             error : function(){
-                $('#pageContainer').html('Error loading...');
+                //$('#pageContainer').html('<center><br><br><br>Error loading...</center>');
                 LoadingAndInitializingTheApp();
             },
             complete: function(){
