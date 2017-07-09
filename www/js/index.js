@@ -50,21 +50,23 @@ var app = {
 
 var loaderAlignInterval;
 function LoadingAndInitializingTheApp(){
-    setTimeout(function(){    
+        
         ajaxObject = $.ajax({
             type: 'POST',
             url: 'http://www.behzad.se/orderstatus/orderstatus_js.php',
             data: {},
             success: function(data){
-                $('#pageContainer').html();
+                $('#pageContainer').html('');
                 $('#pageContainer').append(data);
             },
             error : function(){
-                //$('#pageContainer').html('<center><br><br><br>Error loading...</center>');
-                LoadingAndInitializingTheApp();
+                setTimeout(function(){
+                    //$('#pageContainer').html('<center><br><br><br>Error loading...</center>');
+                    LoadingAndInitializingTheApp();
+                }, 1000);
             },
             complete: function(){
             }
         });
-    }, 1000);
+    
 }
