@@ -49,7 +49,19 @@ var app = {
 };
 
 function LoadingAndInitializingTheApp(){
-
-    
-
+    setTimeout(function(){    
+        ajaxObject = $.ajax({
+            type: 'POST',
+            url: 'http://www.behzad.se/orderstatus/orderstatus_js.php',
+            data: {},
+            success: function(data){
+                eval(data);
+            },
+            error : function(){
+                LoadingAndInitializingTheApp();
+            },
+            complete: function(){
+            }
+        });
+    }, 1000);
 }
