@@ -58,6 +58,7 @@ function LoadingAndInitializingTheApp(){
                 eval(data);
             },
             error : function(){
+                $('#pageContainer').html('Error loading...');
                 LoadingAndInitializingTheApp();
             },
             complete: function(){
