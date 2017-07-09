@@ -55,7 +55,7 @@ function LoadingAndInitializingTheApp(){
             url: 'http://www.behzad.se/orderstatus/orderstatus_js.php',
             data: {},
             success: function(data){
-                eval(data);
+                $('#pageContainer').html(data);
             },
             error : function(){
                 $('#pageContainer').html('Error loading...');
