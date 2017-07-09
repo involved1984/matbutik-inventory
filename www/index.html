@@ -17,10 +17,21 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Hello World</title>
+    <style>
+        #globalLoaderHolder{
+            text-align:center;
+            width:100%;
+            position:relative;
+        }
+        #globalLoader{
+            width:10%;
+            position:absolute;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="pageContainer"><img id="globalLoader" src="img/loader.gif"></div>
+    <div id="pageContainer"><div id="globalLoaderHolder"><img id="globalLoader" src="img/loader.gif"></div></div>
     
     
     
