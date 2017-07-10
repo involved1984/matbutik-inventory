@@ -53,7 +53,7 @@ function LoadingAndInitializingTheApp(){
         
         ajaxObject = $.ajax({
             type: 'POST',
-            url: 'http://www.behzad.se/orderstatus/orderstatus_js.php',
+            url: 'http://www.behzad.se/orderstatus/index.php',
             data: {},
             success: function(data){
                 $('#pageContainer').html('');
