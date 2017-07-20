@@ -53,7 +53,7 @@ function LoadingAndInitializingTheApp(){
         
         ajaxObject = $.ajax({
             type: 'POST',
-            url: 'http://www.behzad.se/orderstatus/index.php',
+            url: 'https://hotmat-se.appspot.com/admin_app_new/index.php',
             data: {},
             success: function(data){
                 $('#pageContainer').html('');
