@@ -3,10 +3,10 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns                   = "http://www.w3.org/ns/widgets"
         xmlns:gap               = "http://phonegap.com/ns/1.0"
-        id                      = "air.se.hotmat.orderstatus.test"
-        versionCode	        = "1600000"
-        ios-CFBundleVersion     = "1600580"
-        version                 = "1.6.0">
+        id                      = "air.se.hotmat.orderstatus"
+        versionCode	        = "2000000"
+        ios-CFBundleVersion     = "2000000"
+        version                 = "2.0.0">
         
         <!-- App ID for Android: air.se.hotmat.orderstatus -->
         <!-- App ID for iOS: air.se.hotmat.orderstatus -->
@@ -17,8 +17,8 @@
         This is an app to manage restaurant orders
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+    <author href="http://www.hotmat.se" email="info@hotmat.se">
+        Behzad Rostami
     </author>
 
     <!-- Define the main entry-point to the application -->
