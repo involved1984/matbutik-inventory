@@ -3,18 +3,16 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns                   = "http://www.w3.org/ns/widgets"
         xmlns:gap               = "http://phonegap.com/ns/1.0"
-        id                      = "air.se.hotmat.orderstatus"
-        versionCode	        = "2000000"
-        ios-CFBundleVersion     = "2000000"
-        version                 = "2.0.0">
+        id                      = "se.matbutik.inventory"
+        versionCode	        = "1000000"
+        ios-CFBundleVersion     = "1000000"
+        version                 = "1.0.0">
         
-        <!-- App ID for Android: air.se.hotmat.orderstatus -->
-        <!-- App ID for iOS: air.se.hotmat.orderstatus -->
         
-    <name>Orderstatus</name>
+    <name>Matbutik inventory app</name>
 
     <description>
-        This is an app to manage restaurant orders
+        This is an app to manage inventory for Matbutik.se
     </description>
 
     <author href="http://www.hotmat.se" email="info@hotmat.se">
@@ -34,7 +32,7 @@
 
     <!-- Plugins -->
     <!-- Core plugins -->
-        
+    <plugin name="phonegap-plugin-barcodescanner" />    
     <plugin name="cordova-plugin-battery-status"/>
     <plugin name="cordova-plugin-device"/>
     <plugin name="cordova-plugin-device-orientation"/>
@@ -50,13 +48,12 @@
     <plugin name="cordova-plugin-device-motion"/>
     <plugin name="cordova-plugin-geolocation"/>
     <plugin name="cordova-plugin-network-information"/>
-    <!--plugin name="cordova-plugin-ble-central" source="npm" /-->
     <gap:plugin name="cordova-plugin-bluetoothle" source="npm" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="phonegap-plugin-push"  spec="1.9.0">
+    
+    <!--plugin name="phonegap-plugin-push"  spec="1.9.0">
         <variable name="SENDER_ID" value="812663353807" />
-    </plugin>
-    <plugin name="cordova-plugin-kiosk"/>
+    </plugin-->
             
         
         
@@ -94,7 +91,7 @@
     </platform>
         
 
-    <platform name="ios">
+    <!--platform name="ios">
         <icon   src="www/res/icon/ios/icon.png"                         platform="ios" width="57"   height="57" />
         <icon   src="www/res/icon/ios/icon@2x.png"                      platform="ios" width="114"  height="114" />
         <icon   src="www/res/icon/ios/icon-40.png"                      platform="ios" width="40"   height="40" />
@@ -122,7 +119,7 @@
         <splash src="www/res/screen/ios/Default@2x~iphone.png"          platform="ios" width="640"  height="960" />
         <splash src="www/res/screen/ios/Default~iphone.png"             platform="ios" width="320"  height="480" />
         <resource-file src="GoogleService-Info.plist" />
-    </platform>
+    </platform-->
 
 
     <!--
@@ -151,8 +148,8 @@
         <resource-file src="test.mp3" target="res/raw/test.mp3" />
         <allow-intent href="market:*" />
     </platform>
-    <platform name="ios">
+    <!--platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-    </platform>
+    </platform-->
 </widget>
