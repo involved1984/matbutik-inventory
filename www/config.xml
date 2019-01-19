@@ -75,7 +75,7 @@
         <icon   src="www/res/icon/android/drawable-xhdpi-icon.png"              density="xhdpi" />
         <icon   src="www/res/icon/android/drawable-xxhdpi-icon.png"             density="xxhdpi" />
         <icon   src="www/res/icon/android/drawable-xxxhdpi-icon.png"            density="xxxhdpi" /-->
-        <icon   src="www/res/icon.png" />
+        <icon   src="res/icon.png" />
             
             
             
