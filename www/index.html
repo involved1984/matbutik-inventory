@@ -18,25 +18,37 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
     <title>Matbutik.se inventory APP</title>
     <style>
-        #orderStatusglobalLoaderHolder{
+        #globalLoaderHolder{
             width:100%;
             text-align:center;
+			display:none;
         }
-        #orderStatusglobalLoader{
+        #globalLoader{
             width:10%;
             position:relative;
             top:200px;
         }
+		#errorLoadingAppMessage{
+			display:none;
+		}
+		#serverUrlContainer{
+			display:none;
+		}
     </style>
 </head>
 
 <body>
     <div id="pageContainer">
-        Server:<br>
-        <input type="text" id="serverURL" value="https://www.matbutik.se"><br>
-        Dev: http://192.168.1.131/matbutik<br>
-        <br><br>
-        <input type="button" id="serverURLButton">
+		<div id="globalLoaderHolder"><img id="globalLoader" src="img/loader.gif"></div>
+		<div id="errorLoadingAppMessage"><center><br><br><br>Det gick inte att ladda appen. Försöker igen</center></div>
+		<div id="serverUrlContainer">
+			<br><br><br>
+			Server:<br>
+			<input type="text" id="serverURL" value="https://www.matbutik.se"><br>
+			Dev: http://192.168.1.131/matbutik<br>
+			<br><br>
+			<input type="button" id="serverURLButton">
+		</div>
     </div>
     
     
