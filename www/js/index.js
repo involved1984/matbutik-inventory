@@ -20,7 +20,7 @@ function LoadingAndInitializingTheApp(){
         ajaxObject = $.ajax({
             type: 'POST',
             //url: 'http://192.168.1.131/matbutik/inventory/index.php',
-            url: 'http://www.matbutik.se/inventory/index.php',
+            url: 'https://www.matbutik.se/inventory/index.php',
             data: {},
             success: function(data){
                 $('#pageContainer').html('');
