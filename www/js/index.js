@@ -14,9 +14,11 @@ var app = {
     }
 };
 
+
 var loaderAlignInterval;
 function LoadingAndInitializingTheApp(){
         
+    
         ajaxObject = $.ajax({
             type: 'POST',
             //url: 'http://192.168.1.131/matbutik/inventory/index.php',
