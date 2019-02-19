@@ -1,4 +1,5 @@
-var SERVERURL = 'http://192.168.1.131/matbutik'; // Development
+var SERVERURL = '';
+//var SERVERURL = 'http://192.168.1.131/matbutik'; // Development
 //var SERVERURL = 'https://www.matbutik.se'; // Live
 
 var app = {
@@ -12,12 +13,22 @@ var app = {
         app.receivedEvent('deviceready');
     },
     receivedEvent: function(id) {
-        LoadingAndInitializingTheApp();
+        checkserverMode();
     }
 };
 
+function checkserverMode(){
+    SERVERURL = window.localStorage.getItem('savedserverurl');
+    if (SERVERURL != null && SERVERURL != undefined && SERVERURL != 'undefined' && SERVERURL != ''){
+		$('#appModeButtons').hide();
+        LoadingAndInitializingTheApp();
+	}
+}
 
-
+function setServerUrl(serverurltosave){
+    window.localStorage.setItem('savedserverurl', serverurltosave);
+    checkserverMode();
+}
 
 function LoadingAndInitializingTheApp(){
         
