@@ -10,11 +10,6 @@ var app = {
     },
     receivedEvent: function(id) {
         selectServer();
-        
-         $('#serverURLButton').on('click', function(){
-            window.localStorage.setItem("serverurl", $('#serverURL').val());
-            selectServer();
-        });
     }
 };
 
@@ -22,11 +17,13 @@ var SERVER_URL = '';
 function selectServer(){
     if (window.localStorage.getItem("serverurl").length > 0){
         SERVER_URL = window.localStorage.getItem("serverurl");
-        $('#serverUrlContainer').hide();
-        $('#globalLoaderHolder').show();
         LoadingAndInitializingTheApp();
     } else {
-       $('#serverUrlContainer').show();
+        var serverurl = prompt("Server URL: (Dev: http://192.168.1.131/matbutik)", "https://www.matbutik.se");
+        if (serverurl != null) {
+            window.localStorage.setItem("serverurl", serverurl);
+            setTimeout(selectServer,100);
+        }
     }
 }
 
