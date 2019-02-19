@@ -15,12 +15,17 @@ var app = {
 
 var SERVER_URL = '';
 function selectServer(){
+    $('#pageContainer').html('');
+    
     if (window.localStorage.getItem("serverurl").length > 0){
+        $('#pageContainer').html('First');
         SERVER_URL = window.localStorage.getItem("serverurl");
         LoadingAndInitializingTheApp();
     } else {
+        $('#pageContainer').html('second');
         var serverurl = prompt("Server URL: (Dev: http://192.168.1.131/matbutik)", "https://www.matbutik.se");
         if (serverurl != null) {
+            $('#pageContainer').html('third');
             window.localStorage.setItem("serverurl", serverurl);
             setTimeout(selectServer,100);
         }
