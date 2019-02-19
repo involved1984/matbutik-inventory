@@ -1,4 +1,5 @@
-var SERVERURL = '';
+var SERVERURL = 'http://192.168.1.131'; // Development
+//var SERVERURL = 'https://www.matbutik.se'; // Live
 
 var app = {
     initialize: function() {
@@ -23,9 +24,7 @@ function LoadingAndInitializingTheApp(){
     
         ajaxObject = $.ajax({
             type: 'POST',
-            //url: 'http://192.168.1.131/matbutik/inventory/index.php',
-            //url: 'https://www.matbutik.se/inventory/index.php',
-            url: SERVER_URL + '/inventory/index.php',
+            url: SERVERURL + '/inventory/index.php',
             data: {},
             success: function(data){
                 $('#pageContainer').html('');
