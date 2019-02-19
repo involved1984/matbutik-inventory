@@ -1,4 +1,4 @@
-var SERVERURL = 'http://192.168.1.131'; // Development
+var SERVERURL = 'http://192.168.1.131/matbutik'; // Development
 //var SERVERURL = 'https://www.matbutik.se'; // Live
 
 var app = {
