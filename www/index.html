@@ -30,11 +30,20 @@
 	#errorLoadingAppMessage{
 		display:none;
 	}
+	    
+	    .appModeButtons{
+		    
+		    
+	    }
     </style>
 </head>
 
 <body>
     <div id="pageContainer">
+	    	<div id="appModeButtons">
+			<input type="button" value="Live" onclick="setServerUrl('https://www.matbutik.se')">
+			<input type="button" value="Development" onclick="setServerUrl('http://192.168.1.131/matbutik')">
+	    	</div>
 		<div id="globalLoaderHolder"><img id="globalLoader" src="img/loader.gif"></div>
 		<div id="errorLoadingAppMessage"><center><br><br><br>Det gick inte att ladda appen. Försöker igen</center></div>
     </div>
