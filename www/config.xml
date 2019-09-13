@@ -34,7 +34,6 @@
     <!-- Plugins -->
     <!-- Core plugins -->
     <plugin name="phonegap-plugin-barcodescanner" />    
-    <plugin name="cordova-plugin-battery-status"/>
     <plugin name="cordova-plugin-device"/>
     <plugin name="cordova-plugin-device-orientation"/>
     <plugin name="cordova-plugin-dialogs"/>
@@ -42,15 +41,17 @@
     <plugin name="cordova-plugin-media"/>
     <plugin name="cordova-plugin-statusbar"/>
     <plugin name="cordova-plugin-vibration"/>
+    <plugin name="cordova-plugin-splashscreen"/>
+    <plugin name="cordova-plugin-geolocation"/>
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <!--plugin name="cordova-plugin-battery-status"/>
     <plugin name="cordova-plugin-file"/>
     <plugin name="cordova-plugin-insomnia" />
     <plugin name="cordova-plugin-background-mode" />
-    <plugin name="cordova-plugin-splashscreen"/>
     <plugin name="cordova-plugin-device-motion"/>
-    <plugin name="cordova-plugin-geolocation"/>
     <plugin name="cordova-plugin-network-information"/>
-    <gap:plugin name="cordova-plugin-bluetoothle" source="npm" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <gap:plugin name="cordova-plugin-bluetoothle" source="npm" /!!>
+    
     
     <!--plugin name="phonegap-plugin-push"  spec="1.9.0">
         <variable name="SENDER_ID" value="812663353807" />
